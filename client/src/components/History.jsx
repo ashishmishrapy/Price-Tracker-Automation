@@ -7,7 +7,7 @@ const History = ({ refresh }) => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await axios.get("https://price-tracker-automation.onrender.com/api/history");
+        const res = await axios.get("http://localhost:3000/api/history");
         setHistory(res.data.data);
         // console.log(res.data);
       } catch (error) {
