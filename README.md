@@ -1,4 +1,4 @@
-# 🛒 Automated Price Tracking System
+# Automated Price Tracking System
 
 A production-style backend system that tracks product prices over time using browser automation, scheduled jobs, and time-series data storage.
 
@@ -6,7 +6,7 @@ This project focuses on **real-world backend engineering practices**, not just b
 
 ---
 
-## 🚀 What This Project Does
+## What This Project Does
 
 - Accepts product URLs from users
 - Scrapes live product data using browser automation
@@ -20,9 +20,9 @@ This project focuses on **real-world backend engineering practices**, not just b
 
 ---
 
-## 🧠 Production-Level Engineering Approach
+## Production-Level Engineering Approach
 
-### 1️⃣ Separation of Static vs Dynamic Data
+### 1. Separation of Static vs Dynamic Data
 
 - **Product data** (URL, title, image) is stored once
 - **History data** stores only time-variant fields like price and availability
@@ -32,7 +32,7 @@ This mirrors how production systems handle **master data vs time-series data**.
 
 ---
 
-### 2️⃣ Immutable Price History
+### 2. Immutable Price History
 
 - Each scrape creates a **new database record**
 - Historical data is never overwritten
@@ -44,7 +44,7 @@ This approach is common in **financial and monitoring systems**.
 
 ---
 
-### 3️⃣ Safe Date-Based Queries
+### 3. Safe Date-Based Queries
 
 - Uses **date-range filtering** instead of relying on record order
 - Prevents incorrect results caused by:
@@ -54,7 +54,7 @@ This approach is common in **financial and monitoring systems**.
 
 ---
 
-### 4️⃣ Automated Background Jobs (Cron)
+### 4. Automated Background Jobs (Cron)
 
 - Daily scraping is handled via scheduled background jobs
 - Cron runs independently of user requests
@@ -64,7 +64,7 @@ This pattern is widely used in production for **periodic data syncs**.
 
 ---
 
-### 5️⃣ Controlled Scraping Strategy
+### 5. Controlled Scraping Strategy
 
 - Products are processed sequentially to avoid IP blocking
 - Designed to support:
@@ -74,7 +74,7 @@ This pattern is widely used in production for **periodic data syncs**.
 
 ---
 
-### 6️⃣ Clean Error Handling & Debugging
+### 6. Clean Error Handling & Debugging
 
 - Failures during scraping do not crash the system
 - Each step is logged for easy debugging
@@ -82,7 +82,7 @@ This pattern is widely used in production for **periodic data syncs**.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Node.js** – Backend runtime
 - **Express.js** – API layer
@@ -92,7 +92,7 @@ This pattern is widely used in production for **periodic data syncs**.
 
 ---
 
-## 📊 Example Use Cases
+## Example Use Cases
 
 - Price tracking & alerts
 - Market monitoring tools
@@ -100,7 +100,7 @@ This pattern is widely used in production for **periodic data syncs**.
 - Historical pricing dashboards
 
 
-## 📌 Future Enhancements
+## Future Enhancements
 
 - Authentication & user-specific tracking
 - Price alerts and notifications
@@ -110,6 +110,6 @@ This pattern is widely used in production for **periodic data syncs**.
 
 ---
 
-## 🧑‍💻 Author
+## Author
 
 Built as a hands-on project to practice **production-grade backend engineering** concepts.
