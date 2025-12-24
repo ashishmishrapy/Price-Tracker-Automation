@@ -29,7 +29,7 @@ const Input = ({ refresh, setRefresh }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post(import.meta.env.VITE_API_URL, {
+      const response = await axios.post("https://price-tracker-automation.onrender.com/api/scrape", {
         url,
         isTrack,
       });
