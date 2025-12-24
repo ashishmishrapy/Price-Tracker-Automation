@@ -29,7 +29,7 @@ const Input = ({ refresh, setRefresh }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:3000/api/scrape", {
+      const response = await axios.post(import.meta.env.VITE_API_URL, {
         url,
         isTrack,
       });
