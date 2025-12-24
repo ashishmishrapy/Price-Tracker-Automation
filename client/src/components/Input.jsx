@@ -22,7 +22,7 @@ const Input = ({ refresh, setRefresh }) => {
   const handleClick = async () => {
     // console.log("Button Clicked");
 
-    if (!url.trim() || !url.includes("amazon")) {
+    if (!url.trim()) {
       alert("Please enter a correct URL.");
       return;
     }
